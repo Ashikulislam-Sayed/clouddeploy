@@ -1,0 +1,11 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clouddeploy:1.0
+    container_name: clouddeploy-app
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
